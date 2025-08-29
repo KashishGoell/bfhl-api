@@ -8,10 +8,10 @@ app.post('/bfhl', (req, res) => {
     const data = req.body.data || [];
     
     // REPLACE WITH YOUR DETAILS
-    const full_name = "moksh";
-    const dob = "01012000";
-    const email = "moksh@example.com";
-    const roll_number = "VIT123";
+    const full_name = "kashish";
+    const dob = "28082005";
+    const email = "kashish2882005@gmail.com";
+    const roll_number = "22bce8559";
     
     const evenNumbers = [];
     const oddNumbers = [];
