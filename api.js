@@ -1,16 +1,18 @@
-﻿const express = require('express');
+const express = require('express');
 const app = express();
 
 app.use(express.json());
 
+// Handle POST requests to /bfhl
 app.post('/bfhl', (req, res) => {
   try {
     const data = req.body.data || [];
     
+    
     const full_name = "kashish";
-    const dob = "8222018045";
+    const dob = "28082005";
     const email = "kashish2882005@gmail.com";
-    const roll_number = "22bce8559";
+    const roll_number = "22BCE8559";
     
     const evenNumbers = [];
     const oddNumbers = [];
@@ -50,7 +52,7 @@ app.post('/bfhl', (req, res) => {
     
     const response = {
       is_success: true,
-      user_id: \\_\\,
+      user_id: `${full_name}_${dob}`,
       email: email,
       roll_number: roll_number,
       odd_numbers: oddNumbers,
@@ -70,4 +72,13 @@ app.post('/bfhl', (req, res) => {
   }
 });
 
+// Handle GET requests (for testing)
+app.get('/bfhl', (req, res) => {
+  res.json({ 
+    operation_code: 1,
+    message: "API is working! Use POST method with JSON data." 
+  });
+});
+
+// Export for Vercel
 module.exports = app;
